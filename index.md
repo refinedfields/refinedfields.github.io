@@ -67,11 +67,12 @@ _Scene enriching_ finetunes a pre-trained generative prior to this K-Planes repr
 
 ## Citation
 ```
-@inproceedings{EvE,
-  title={},
-  author={},
-  booktitle={},
-  pages={},
-  year={2024}
+@misc{kassab2023eve,
+      title={EvE: Exploiting Generative Priors for Radiance Field Enrichment}, 
+      author={Karim Kassab and Antoine Schnepf and Jean-Yves Franceschi and Laurent Caraffa and Jeremie Mary and Valérie Gouet-Brunet},
+      year={2023},
+      eprint={2312.00639},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
