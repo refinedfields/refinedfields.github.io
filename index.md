@@ -33,7 +33,7 @@ _Scene refining_ finetunes a pre-trained prior and infers a new _refined_ K-Plan
 ## Synthetic Renders
 <center>
     <div>
-        <video width="23%" height="23%" autoplay muted loop playsinline>
+        <video width="23%" height="23%" playbackRate="0.2" autoplay muted loop playsinline>
             <source src="assets/css/chair.mp4" type="video/mp4" style="display: inline-block;">
             Your browser does not support the video tag.
         </video>
