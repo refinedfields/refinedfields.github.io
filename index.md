@@ -72,10 +72,10 @@ _Scene refining_ finetunes a pre-trained prior and infers a new _refined_ K-Plan
 
 ## Citation
 ```
-@article{kassab2023eve,
-  title={EvE: Exploiting Generative Priors for Radiance Field Enrichment},
-  author={Kassab, Karim and Schnepf, Antoine and Franceschi, Jean-Yves and Caraffa, Laurent and Mary, Jeremie and Gouet-Brunet, Val{\'e}rie},
-  journal={arXiv preprint arXiv:2312.00639},
-  year={2023}
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={}
 }
 ```
