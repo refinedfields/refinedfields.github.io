@@ -1,9 +1,5 @@
-<p align="justify">Modeling large scenes from unconstrained images has proven to be a major challenge in computer vision.
-Existing methods tackling in-the-wild scene modeling operate in a closed-world setting, where knowledge is limited to a scene's captured images.
-We propose RefinedFields, which is, to the best of our knowledge, the first method leveraging pre-trained models to improve in-the-wild scene modeling.
-We employ pre-trained networks to refine K-Planes representations via conditioned optimization guidance using an alternating training procedure.
-We carry out extensive experiments and verify the merit of our method on synthetic data and real tourism photo collections.
-RefinedFields enhances rendered scenes with richer details and outperforms the state of the art on the task of novel view synthesis in-the-wild.</p>
+<p align="justify">Modeling large scenes from unconstrained images has proven to be a major challenge in computer vision. Existing methods tackling in-the-wild scene modeling operate in closed-world settings, where no conditioning on priors acquired from real-world images is present. We propose RefinedFields, which is, to the best of our knowledge, the first method leveraging pre-trained models to improve in-the-wild scene modeling. We employ pre-trained networks to refine K-Planes representations via optimization guidance using an alternating training procedure.
+We carry out extensive experiments and verify the merit of our method on synthetic data and real tourism photo collections. RefinedFields enhances rendered scenes with richer details and outperforms previous work on the task of novel view synthesis in the wild.</p>
 
 ## Method
 ![Figure](assets/css/schema.svg)
