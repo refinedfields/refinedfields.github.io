@@ -68,10 +68,10 @@ _Scene refining_ finetunes a pre-trained prior and infers a new _refined_ K-Plan
 
 ## Citation
 ```
-@article{,
-  title={},
-  author={},
-  journal={},
-  year={}
+@article{kassab2023refinedfields,
+  title={RefinedFields: Radiance Fields Refinement for Unconstrained Scenes},
+  author={Kassab, Karim and Schnepf, Antoine and Franceschi, Jean-Yves and Caraffa, Laurent and Mary, Jeremie and Gouet-Brunet, Val{\'e}rie},
+  journal={arXiv preprint arXiv:2312.00639},
+  year={2023}
 }
 ```
