@@ -1,0 +1,1 @@
+# RefinedFields: Radiance Fields Refinement for Planar Scene Representations

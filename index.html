@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scaled IG</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RefinedFields: Radiance Fields Refinement <br> for Planar Scene Representations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=0dObvuYAAAAJ&hl=fr" target="_blank" rel="noopener noreferrer">Karim Kassab</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.fr/citations?user=CcjdVBgAAAAJ&hl=fr" target="_blank" rel="noopener noreferrer">Antoine Schnepf</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://jyfranceschi.fr/" target="_blank" rel="noopener noreferrer">Jean-Yves Franceschi</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=N0YTGr8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Laurent Caraffa</a><sup>2</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://scholar.google.fr/citations?user=T3dQRjAAAAAJ&hl=fr" target="_blank" rel="noopener noreferrer">Jeremie Mary</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.fr/citations?user=mqq6zX4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Valérie Gouet-Brunet</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1 </sup>Criteo AI Lab, Paris, France</span><br>
+            <span class="author-block"><sup>2 </sup>LASTIG, Université Gustave Eiffel, IGN-ENSG, F-94160 Saint-Mandé</span><br>
+            <span class="author-block"><sup>3 </sup>Université Côte d’Azur, CNRS, I3S, France</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/pdf?id=S6JpSsYBDZ"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (coming soon)</span>
+                  </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ### -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Planar scene representations have recently witnessed increased interests for modeling scenes from images, as their lightweight planar structure enables compatibility with image-based models. Notably, K-Planes have gained particular attention as they extend planar scene representations to support in-the-wild scenes, in addition to object-level scenes. However, their visual quality has recently lagged behind that of state-of-the-art techniques. To reduce this gap, we propose RefinedFields, a method that leverages pre-trained networks to refine K-Planes scene representations via optimization guidance using an alternating training procedure. We carry out extensive experiments and verify the merit of our method on synthetic data and real tourism photo collections. RefinedFields enhances rendered scenes with richer details and improves upon its base representation on the task of novel view synthesis. Our code is publicly available as open-source.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+  </div>
+</section>
+
+<!-- Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <br><br>
+        <div class="content has-text-justified">
+          <div class="columns is-centered has-text-centered">
+            <img src="static/images/schema.svg" alt="Method Scheme" width="75%"/>
+          </div>
+          <p>
+            We learn a scene through two alternating stages. <i>Scene fitting</i> optimizes our K-Planes representation to reproduce the images in the training set, as traditionally done in neural rendering techniques. <i>Scene refining</i> finetunes a pre-trained prior and infers a new <i>refined</i> K-Planes representation, which will subsequently be corrected by scene fitting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Method -->
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+          <h3 class="title is-4">In-the-wild renders</h3>
+          <br><br>
+          <div class="columns is-centered has-text-centered">
+            <video id="sacre" autoplay muted loop playsinline width="50%">
+              <source src="./static/videos/sacre.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="trevi" autoplay muted loop playsinline width="50%">
+              <source src="./static/videos/trevi.mp4"
+                      type="video/mp4">
+            </video>      
+          </div>
+          <h3 class="title is-4">Synthetic renders</h3>
+          <br><br>
+          <div class="columns is-centered has-text-centered">
+            <video id="chair" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/chair.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="drums" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/drums.mp4"
+                      type="video/mp4">
+            </video> 
+            <video id="ficus" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/ficus.mp4"
+                      type="video/mp4">
+            </video>   
+            <video id="hotdog" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/hotdog.mp4"
+                      type="video/mp4">
+            </video>  
+            <br>
+            <video id="lego" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/lego.mp4"
+                      type="video/mp4">
+            </video>   
+            <video id="materials" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/materials.mp4"
+                      type="video/mp4">
+            </video>   
+            <video id="mic" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/mic.mp4"
+                      type="video/mp4">
+            </video>   
+            <video id="ship" autoplay muted loop playsinline width="30%">
+              <source src="./static/videos/ship.mp4"
+                      type="video/mp4">
+            </video>   
+          </div>
+          <br><br>
+        </div>
+        <br/>
+      </div>
+  </div>
+</section>
+<!--/ Results -->
+
+<!-- BibTex -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{kassab2023refinedfields,
+        title={RefinedFields: Radiance Fields Refinement for Unconstrained Scenes},
+        author={Kassab, Karim and Schnepf, Antoine and Franceschi, Jean-Yves and Caraffa, Laurent and Mary, Jeremie and Gouet-Brunet, Val{\'e}rie},
+        journal={arXiv preprint arXiv:2312.00639},
+        year={2023}
+      }
+    </code></pre>
+  </div>
+</section>
+<!--/ BibTex -->
+
+
+<!-- Thanks -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website was built on top of the <a href="https://github.com/nerfies/nerfies.github.io">following template</a>, for which we thank the authors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/ Thanks -->
+
+</body>
+</html>
